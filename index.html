@@ -1,33 +1,232 @@
 <html>
-<head>
+	<head>
+		<title> Segundo ano Eleodoro </title>
+			<style>
+			
+ 			body {
+          		font-family: Arial, sans-serif;
+            		margin: 0;
+            		padding: 0;
+            		background-color: #f5f5f5;
+        		}
 
- <title>Página de Notícias</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1> SANTA NOTÍCIAS </h1>
-    </header>
+ body:before {
+            content: "0";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
 
-<main>
-        <section class="noticia">
-<div class="imagem-fundo" style="background-image: url('noticia1.jpg');">
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
 
- <h2>Ecopark Sul será construído no Bairro Santa Felicidade em Cascavel</h2>
+        /* Estilos para o botão Fechar */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
 
- <p>Data: 31 de Julho de 2023</p>
-            </div>
-            <div class="conteudo">
 
-<p>Segundo a Secretaria de Meio Ambiente, a construção  pode começar ainda este ano.</p>
-                <p>ESCREVER A NOTICIA AQUI.</p>
-                <p>Apesar das obras terem começado, ainda não sabemos quando ficarão prontas.</p>
-                <p>Adicione mais conteúdo aqui,</p>
-            </div>
-        </section>
- </main>
-    <footer>
-        <p>Copyright 2023 Victor Alves - Programação. Todos os direitos reservados.</p>
-    </footer>
-</body>
+
+			header {
+           
+			background-size: contain;
+			background-position:center;
+			background-repeat: no-repeat;
+			background-color: #1F304F;
+           		color: #191970;
+           		text-align: center;
+           		padding: 1rem;
+			line-height: 1.5;
+            		border-radius: 5px;
+            		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				
+        		}
+			
+     			.article {
+            		background-color: #fff;
+			line-height: 1.5;
+            		border-radius: 5px;
+            		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            		padding: 1.5rem;
+            		margin-bottom: 2rem;
+ 			max-width: 1000px;
+           	 	margin: 0 auto;
+            		padding: 2rem;
+       			 }
+
+  			footer {
+           		 background-color: #1F304F;
+			background-size: contain;
+			background-position:center;
+			background-repeat: no-repeat;
+            		color: #fff;
+            		text-align: center;
+           		padding: 1rem;
+			border-radius: 5px;
+            		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+
+			div > div {
+    			display: inline-block;
+			}
+
+
+			 .meu-botao {
+         		   background-color: #ffffff;
+        		    color: #1F304F;
+         		   padding: 5px 10px;
+          		  border: none;
+       			     border-radius: 5px;
+          		  cursor: pointer;
+          		  transition: transform 0.5s; 
+				font-size:11px;
+			font-variant:small-caps;
+			font-family:Arial, Helvetica, sans-serif;
+			text-decoration:none;
+      			  }
+
+  .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery img {
+            width: 240px;
+            height: 200px;
+            object-fit: cover;
+            margin: 5px;
+            transition: transform 0.3s ease; /* Adiciona um efeito de transição suave */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.5); /* Aumenta o tamanho da imagem em 10% quando o mouse está sobre ela */
+        }  
+
+
+
+
+</style>
+
+
+	</head>
+	<body>
+	
+	
+
+
+		<header><a href="index.html"><img src="logo3.png" height="80" width=auto><br>
+<div><br>
+    <div>
+        <a href="index.html#historia" class="meu-botao">história</a>
+    </div>
+    <div>
+       <a href="https://www.seusite.com/pagina-de-destino" class="meu-botao">notícias</a>
+    </div>
+ <div>
+        <a href="index.html#cursos" class="meu-botao">cursos técnicos</a>
+    </div>
+ <div>
+        <a href="https://www.seusite.com/pagina-de-destino" class="meu-botao">itinerários</a>
+    </div>
+<div>
+        <a href="contato.html" class="meu-botao">contato</a>
+    </div>
+</div>
+</header><br><br>
+
+ <div id="popup" class="popup">
+        <span class="close-button" onclick="fecharPopup()">&#10006;</span>
+      <center>  <h2>Bem-vindo ao nosso site!</h2>
+        <p>Aproveite a sua visita.</p></center>
+    </div>
+ 
+
+			 <div class="article">
+
+ 				<center><img src="foto.png" height="500" width=auto>
+				
+				<p><b> A PRIMEIRA ESCOLA DE CASCAVEL</b></p></center>
+				<div id="historia">
+				<p align="justify"> O Colégio Eleodoro Ébano Pereira foi a primeira instituição escolar de Cascavel, e foi fundado em 1932, quando começou a funcionar precariamente na igreja que se situava à Avenida Iguaçu s/n, deste município, sem nenhum ato oficial que regulamentasse o funcionamento.</p>
+				<p align="justify"> Atualmente o Colégio Eleodoro atende, aproximadamente 1.872 alunos.</p>
+ <div class="gallery">
+        <img src="eleodoro1.png" alt="Imagem 1">
+        <img src="eleodoro2.png" alt="Imagem 2">
+        <img src="eleodoro3.png" alt="Imagem 3">
+		<img src="eleodoro4.png" alt="Imagem 3">
+		
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+
+			 </article>
+			</div>
+</div>
+<br>
+<br>
+
+			<div class="article">
+			<div id="cursos">
+			<center><img src="cursos.png" height="360" width=auto>
+			</center>
+				<div id="cursos">
+				
+
+
+
+<center><img src="visual1.png" height="432" width=auto></center>
+
+
+
+
+<center><img src="teatro1.png" height="433" width=auto>
+
+
+
+<center><img src="comvisual1.png" height="566" width=auto></center>
+
+<center><img src="sistemas1.png" height="437" width=auto></center>
+<br><br>
+<center><img src="adm.png" height="100" width=auto></center>
+<br><br>
+
+
+
+				<p align="justify"> Entre em contato para mais informações</p>
+
+			 </article>
+			</div>
+</div>
+<br>
+</div>
+<br>		
+		<footer> <section id="rodape">
+     
+        <p>Este site foi criado pelos alunos do 2º ano C, como parte de um trabalho escolar da disciplina de Matemática 2.</p>
+    </section>
+        <p>Proíbido copiar, 2023.</p></footer>
+	</body>
 </html>
